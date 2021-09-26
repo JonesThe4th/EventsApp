@@ -1,0 +1,261 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res-auto"
+    android1:layout_width="match_parent"
+    android1:layout_height="match_parent"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android1:orientation="vertical"
+    android1:background="@color/smokyWhite">
+    <com.google.android.material.appbar.AppBarLayout
+        android1:layout_width="match_parent"
+        android1:layout_height="wrap_content"
+        android1:background="@color/smokyWhite"
+        >
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android1:layout_width="match_parent"
+        android1:layout_height="wrap_content"
+        android1:contentScrim="@color/smokyWhite"
+        android1:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+        android1:title="@string/dashboard_title"
+        android:expandedTitleTextAppearance="@style/expandedBarTextStyle"
+        >
+        <LinearLayout
+            android1:layout_width="match_parent"
+            android1:layout_height="300dp"
+            android1:background="@drawable/custom_app_bar_background"
+            android1:paddingHorizontal="20dp"
+            android1:orientation="vertical"
+            >
+            <TextView
+                android1:layout_marginTop="70dp"
+                android1:layout_width="match_parent"
+                android1:layout_height="wrap_content"
+                android1:text="@string/dashboard_heading"
+                android1:textColor="@color/white"
+                android1:textSize="30sp"
+                android1:textStyle="bold"
+                >
+
+            </TextView>
+            <TextView
+                android1:layout_marginTop="10dp"
+                android1:layout_width="match_parent"
+                android1:layout_height="wrap_content"
+                android1:text="@string/dashboard_sub_heading"
+                android1:textColor="@color/lightText"
+                android1:textSize="20sp"
+
+                >
+
+            </TextView>
+        <EditText
+            android1:layout_marginTop="20dp"
+             android1:layout_width="match_parent"
+             android1:layout_height="wrap_content"
+            android1:height="50dp"
+            android1:hint="@string/search_bar_hint"
+            android1:textColorHint="@color/white"
+            android1:paddingLeft="20dp"
+            android1:background="@drawable/search_bar_background"
+            android1:drawableEnd="@drawable/search_btn"
+            android1:textColor="@color/white"
+            android1:paddingRight="5dp"
+            android1:drawableRight="@drawable/search_btn"
+            android1:paddingEnd="5dp"
+            android1:autofillHints="">
+
+        </EditText>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android1:layout_width="match_parent"
+            android1:layout_height="?attr/actionBarSize"
+            android1:background="@color/colorPrimaryDark"
+            android:titleTextColor="@color/white"
+            >
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+    <androidx.core.widget.NestedScrollView
+        android1:layout_width="match_parent"
+        android1:layout_height="match_parent"
+        android1:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        >
+        <LinearLayout
+            android1:layout_width="match_parent"
+            android1:layout_height="wrap_content"
+            android1:layout_marginTop="10dp"
+            android1:layout_marginHorizontal="25dp"
+            >
+            <LinearLayout
+                android1:layout_width="match_parent"
+                android1:layout_height="wrap_content"
+                android1:layout_marginVertical="10dp"
+                android1:id="@+id/eventCardLayout"
+                android1:orientation="vertical"
+                >
+                <androidx.cardview.widget.CardView
+                    android1:layout_width="match_parent"
+                    android1:layout_height="wrap_content"
+                    android1:elevation="0dp"
+                    android:cardCornerRadius="12dp"
+                    >
+                    <FrameLayout
+                        android1:layout_width="match_parent"
+                        android1:layout_height="wrap_content">
+                        <ImageView
+                            android1:layout_width="match_parent"
+                            android1:layout_height="230dp"
+                            android1:src="@drawable/party_image"
+                            android1:scaleType="centerCrop"
+                            android1:id="@+id/card_image">
+                        </ImageView>
+
+                        <TextView
+                            android1:layout_width="match_parent"
+                            android1:layout_height="wrap_content"
+                            android1:layout_gravity="center_horizontal|bottom"
+                            android1:layout_marginLeft="10dp"
+                            android1:layout_marginBottom="20dp"
+                            android1:text="Winning Post"
+                            android1:textColor="@color/white"
+                            android1:id="@+id/eventTitle"
+                            android1:textStyle="bold"
+                            android1:layout_marginStart="10dp">
+
+                        </TextView>
+
+                        <androidx.cardview.widget.CardView
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content"
+                            android1:layout_margin="10dp"
+                            android1:elevation="5dp"
+                            android:cardCornerRadius="12dp">
+                            <LinearLayout
+                                android1:layout_width="60dp"
+                                android1:layout_height="70dp"
+                                android1:background="@color/white"
+                                android1:weightSum="10"
+                                android1:layout_gravity="bottom"
+                                android1:orientation="vertical">
+                                <LinearLayout
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="0dp"
+                                    android1:layout_weight="7.5"
+                                    android1:layout_gravity="center"
+                                    android1:orientation="vertical"
+                                    >
+                                    <TextView
+                                        android1:layout_width="match_parent"
+                                        android1:layout_height="wrap_content"
+                                        android1:text="25"
+                                        android1:textSize="25sp"
+                                        android1:textStyle="bold"
+                                        android1:textColor="@color/textBlue"
+                                        android1:textAlignment="center"
+                                        android1:gravity="center_horizontal"
+                                        android1:id="@+id/day"
+                                        >
+
+                                    </TextView>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android1:layout_width="match_parent"
+                                    android1:layout_height="wrap_content"
+                                    android1:layout_weight="2.5"
+                                    android1:background="@color/lightBlue"
+                                    android1:orientation="vertical"
+                                    >
+
+                                    <TextView
+                                        android1:layout_width="match_parent"
+                                        android1:layout_height="wrap_content"
+                                        android1:text="APR"
+                                        android1:id="@+id/month"
+                                        android1:textAlignment="center"
+                                        android1:textColor="@color/textBlue"
+                                        android1:textSize="13sp"
+                                        android1:gravity="center_horizontal" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android1:layout_width="match_parent"
+                            android1:layout_height="50dp"
+                            android1:layout_marginTop="5dp"
+                            android1:layout_gravity="start|center"
+                            android1:orientation="horizontal"
+                            android1:weightSum="10"
+                            >
+                            <LinearLayout
+                                android1:layout_width="0dp"
+                                android1:layout_height="wrap_content"
+                                android1:layout_weight="5"
+                                android1:orientation="horizontal"
+                                android1:paddingVertical="10dp"
+                                >
+
+                                <ImageView
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="wrap_content"
+                                    android1:src="@drawable/ic_baseline_location_on_24"
+                                    android1:contentDescription="TODO" />
+
+                                <TextView
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="wrap_content"
+                                    android1:ellipsize="end"
+                                    android1:text="@string/dj_beach_resort"
+                                    android1:id="@+id/location"
+                                    android1:textSize="20sp"
+                                    android1:textColor="@color/deepBlue"
+                                    android1:textStyle="bold"
+                                    android1:maxLines="1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android1:layout_width="0dp"
+                                android1:layout_height="wrap_content"
+                                android1:layout_weight="5"
+                                android1:orientation="horizontal"
+                                android1:gravity="end|center"
+                                >
+                                <LinearLayout
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="wrap_content"
+                                    android1:orientation="vertical"
+                                    android1:background="@drawable/count_background"
+                                    >
+
+                                    <TextView
+                                        android1:layout_width="match_parent"
+                                        android1:layout_height="wrap_content"
+                                        android1:text="+135"
+                                        android1:textAlignment="center"
+                                        android1:textColor="@color/textBlue"
+                                        android1:textSize="15sp"
+                                        android1:id="@+id/count"
+                                        android1:textStyle="bold"
+                                        android1:gravity="center_horizontal" />
+
+                                </LinearLayout>
+                                <TextView
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="wrap_content"
+                                    android1:layout_marginLeft="5dp"
+                                    android1:maxLines="1"
+                                    android1:text="are interested"
+                                    android1:textColor="@android:color/darker_gray "
+                            </LinearLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
